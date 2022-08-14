@@ -1,0 +1,263 @@
+:root {
+  /* Color */
+  --clr-red: hsl(0, 100%, 66%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-gray-violet: hsl(270, 3%, 87%);
+  --clr-dark-gray-violet: hsl(279, 6%, 55%);
+  --clr-dark-violet: hsl(278, 68%, 11%);
+
+  /* Font Family */
+  --ff-sans: 'Space Grotesk', sans-serif;
+
+  /* Font Size */
+  --fs-400: 18px;
+
+  /* Font Weight */
+  --fw-500: 500;
+}
+
+/* ---------------- */
+/* Reset            */
+/* ---------------- */
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  display: flex;
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  color: var(--clr-dark-violet);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------- */
+/* Utility Class    */
+/* ---------------- */
+
+/* General */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1em);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1em);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.center {
+  text-align: center;
+}
+
+.end {
+  text-align: end;
+}
+
+/* Background Color */
+.bg-white {
+  background: var(--clr-white);
+}
+
+.bg-violet {
+  background: var(--clr-dark-violet);
+}
+
+/* Text Color */
+
+.text-violet {
+  color: var(--clr-dark-violet);
+}
+
+.text-white {
+  color: var(--clr-white);
+}
+
+.text-grey {
+  color: var(--clr-light-gray-violet);
+}
+
+/* Font Size */
+
+.fs-300 {
+  font-size: 0.625em;
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: 1.375em;
+}
+
+/* Words Spacing */
+.ws-400 {
+  word-spacing: 1.25em;
+}
+
+/* Letter Spacing */
+.ls-400 {
+  letter-spacing: 2px;
+}
+
+/* Font Family */
+.ff-sans {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ---------------- */
+/* Other            */
+/* ---------------- */
+
+.left-side {
+  width: 33%;
+  background-image: url(images/bg-main-desktop.png);
+}
+
+.right-side {
+  width: 66%;
+}
+
+.circles {
+  width: 2.375em;
+  height: 2.375em;
+  border-radius: 100%;
+  border: 1px solid var(--clr-white);
+  order: 1;
+}
+
+.circles + .circles {
+  display: grid;
+  width: 1.25em;
+  height: 1.25em;
+  order: 2;
+}
+
+.circles-section {
+  align-items: center;
+  margin-bottom: 2.5em;
+}
+
+.front-card {
+  background-image: url(images/bg-card-front.png);
+  position: absolute;
+  top: 16%;
+  left: 15%;
+  padding: 1em;
+  border-radius: 5%;
+}
+
+.back-card {
+  width: 325px;
+  position: absolute;
+  top: 55%;
+  left: 21%;
+  border-radius: 5%;
+}
+
+.back-card-number {
+  position: absolute;
+  top: 68.5%;
+  left: 41%;
+  font-size: 0.875em;
+  z-index: 1;
+}
+
+.card-footer {
+  margin-top: 2em;
+  gap: 8.75em;
+}
+
+.form {
+  position: relative;
+  left: 40%;
+  top: 25%;
+}
+
+.submit-button {
+  margin-top: 1em;
+  width: 290px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  border: 1px solid var(--clr-white);
+}
+
+input[type='text'] {
+  border: none;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border: 1.5px solid;
+}
+
+input[type='text']:focus {
+  border: none;
+  border: 1.5px solid rgb(173, 17, 173);
+}
+
+.warn {
+  font-size: 0.6em;
+  color: red;
+}
