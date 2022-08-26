@@ -1,14 +1,23 @@
+// Set All Warning to hide
 $('.name-blank-warning').hide();
 $('.contain-number-warning').hide();
 $('.number-blank-warning').hide();
 $('.number-warning').hide();
+$('.date-warning').hide();
+$('.date-contain-letter').hide();
+$('.cvc-warning').hide();
+$('.cvc-contain-letter').hide();
 
+// Creating Variables
 const cardholderNameInput = document.getElementById('cardholder-name');
 const cardNumberInput = document.getElementById('card-number');
 const cardNameError = document.querySelector('name-error');
 const cardNameDisplay = document.getElementsByClassName('card-name-display');
+const cardMonth = document.getElementById('month');
+const cardDate = document.getElementById('date');
+const cardCVC = document.getElementById('cvc');
 
-cardholderNameInput.addEventListener('keyup', (e) => {
+cardholderNameInput.addEventListener('keyup', function (e) {
   let key = e.key;
   let keyLetters = key.match(/^[A-za-z ]*$/);
 
@@ -25,7 +34,9 @@ cardholderNameInput.addEventListener('keyup', (e) => {
   }
 });
 
-cardNumberInput.addEventListener('keyup', (e) => {
+cardNumberInput.addEventListener('keyup', function (e) {
+  e.target.value = e.target.value.replace(/(\d{4})(\d+)/g, '$1 $2');
+
   let key = e.key;
   let keyLetters = key.match(/^[A-za-z ]*$/);
 
@@ -39,6 +50,57 @@ cardNumberInput.addEventListener('keyup', (e) => {
     $('.number-warning').show();
   } else {
     $('.number-warning').hide();
+  }
+});
+
+cardMonth.addEventListener('keyup', function (e) {
+  let key = e.key;
+  let keyLetters = key.match(/^[A-za-z ]*$/);
+
+  if (cardMonth.value.length === 0) {
+    $('.date-warning').show();
+  } else {
+    $('.date-warning').hide();
+  }
+
+  if (containsAnyLetter(cardMonth.value) === true) {
+    $('.date-contain-letter').show();
+  } else {
+    $('.date-contain-letter').hide();
+  }
+});
+
+cardDate.addEventListener('keyup', function (e) {
+  let key = e.key;
+  let keyLetters = key.match(/^[A-za-z ]*$/);
+
+  if (cardDate.value.length === 0) {
+    $('.date-warning').show();
+  } else {
+    $('.date-warning').hide();
+  }
+
+  if (containsAnyLetter(cardDate.value) === true) {
+    $('.date-contain-letter').show();
+  } else {
+    $('.date-contain-letter').hide();
+  }
+});
+
+cardCVC.addEventListener('keyup', function (e) {
+  let key = e.key;
+  let keyLetters = key.match(/^[A-za-z ]*$/);
+
+  if (cardCVC.value.length === 0) {
+    $('.cvc-warning').show();
+  } else {
+    $('.cvc-warning').hide();
+  }
+
+  if (containsAnyLetter(cardCVC.value) === true) {
+    $('.date-contain-letter').show();
+  } else {
+    $('.date-contain-letter').hide();
   }
 });
 

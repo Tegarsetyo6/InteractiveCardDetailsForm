@@ -48,14 +48,16 @@
         <div class="flex" style="gap: 2.9em">
           <div>
             <label class="fs-300" for="month date">EXP. DATE (MM/YY) </label><br />
-            <input type="text" name="month" size="4" maxlength="2" placeholder="MM" />
-            <input type="text" name="date" size="4" maxlength="2" placeholder="YY" />
+            <input type="text" id="month" name="month" size="4" maxlength="2" placeholder="MM" />
+            <input type="text" id="date" name="date" size="4" maxlength="2" placeholder="YY" />
+            <p class="date-contain-letter warn">Wrong Format, Numbers Only</p>
             <p class="date-warning warn">Can't be blank</p>
           </div>
           <div>
             <label class="fs-300" for="cvc">CVC</label><br />
-            <input type="text" name="cvc" size="8" maxlength="3" placeholder="e.g 123" />
+            <input type="text" id="cvc" name="cvc" size="8" maxlength="3" placeholder="e.g 123" />
             <p class="cvc-warning warn">Can't be blank</p>
+            <p class="cvc-contain-letter warn">Wrong Format, Numbers Only</p>
           </div>
         </div>
         <button class="submit-button text-white bg-violet" type="submit">Confirm</button>
