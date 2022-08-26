@@ -1,5 +1,7 @@
 $('.name-blank-warning').hide();
 $('.contain-number-warning').hide();
+$('.number-blank-warning').hide();
+$('.number-warning').hide();
 
 const cardholderNameInput = document.getElementById('cardholder-name');
 const cardNumberInput = document.getElementById('card-number');
@@ -20,6 +22,23 @@ cardholderNameInput.addEventListener('keyup', (e) => {
     $('.contain-number-warning').show();
   } else {
     $('.contain-number-warning').hide();
+  }
+});
+
+cardNumberInput.addEventListener('keyup', (e) => {
+  let key = e.key;
+  let keyLetters = key.match(/^[A-za-z ]*$/);
+
+  if (cardNumberInput.value.length === 0) {
+    $('.number-blank-warning').show();
+  } else {
+    $('.number-blank-warning').hide();
+  }
+
+  if (containsAnyLetter(cardNumberInput.value) === true) {
+    $('.number-warning').show();
+  } else {
+    $('.number-warning').hide();
   }
 });
 
