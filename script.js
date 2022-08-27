@@ -7,12 +7,12 @@ $('.date-warning').hide();
 $('.date-contain-letter').hide();
 $('.cvc-warning').hide();
 $('.cvc-contain-letter').hide();
+$('.submit-feedback').hide();
 
 // Creating Variables
 const cardholderNameInput = document.getElementById('cardholder-name');
 const cardNumberInput = document.getElementById('card-number');
 const cardNameError = document.querySelector('name-error');
-const cardNameDisplay = document.getElementsByClassName('card-name-display');
 const cardMonth = document.getElementById('month');
 const cardDate = document.getElementById('date');
 const cardCVC = document.getElementById('cvc');
@@ -104,8 +104,20 @@ cardCVC.addEventListener('keyup', function (e) {
   }
 });
 
-$(document).submit(function () {
-  alert(cardholderNameInput.value);
+$(document).submit(function (event) {
+  var a = cardholderNameInput.value;
+  var b = cardNumberInput.value;
+  var c = cardMonth.value;
+  var d = cardDate.value;
+  var e = cardCVC.value;
+
+  if ((a == null || a == '', b == null || b == '', c == null || c == '', d == null || d == '', e == null || e == '')) {
+    alert('Please Fill All Required Field');
+    return false;
+  } else {
+    $('.form').hide();
+    $('.submit-feedback').show();
+  }
 });
 
 // Functions
