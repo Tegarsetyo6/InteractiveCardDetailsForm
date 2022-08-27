@@ -131,6 +131,10 @@ select {
   color: var(--clr-light-gray-violet);
 }
 
+.text-dark-grey {
+  color: var(--clr-dark-gray-violet);
+}
+
 /* Font Size */
 
 .fs-300 {
@@ -260,4 +264,25 @@ input[type='text']:focus {
 .warn {
   font-size: 0.6em;
   color: red;
+}
+
+.submit-feedback {
+  position: relative;
+  left: 25rem;
+  top: 10rem;
+  width: fit-content;
+  text-align: center;
+}
+
+.check-icon {
+  margin: auto;
+  text-align: center;
+}
+
+.continue-button {
+  margin-top: 1em;
+  width: 290px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
 }
