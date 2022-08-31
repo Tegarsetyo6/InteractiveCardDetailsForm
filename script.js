@@ -104,7 +104,7 @@ cardCVC.addEventListener('keyup', function (e) {
   }
 });
 
-$(document).submit(function (event) {
+$('.submit-button').click(function (event) {
   var a = cardholderNameInput.value;
   var b = cardNumberInput.value;
   var c = cardMonth.value;
@@ -118,6 +118,8 @@ $(document).submit(function (event) {
     $('.form').hide();
     $('.submit-feedback').show();
   }
+
+  event.preventDefault();
 });
 
 // Functions

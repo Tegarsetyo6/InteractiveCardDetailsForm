@@ -242,7 +242,8 @@ select {
 
 .submit-button:hover,
 .submit-button:focus {
-  border: 1px solid var(--clr-white);
+  background-color: var(--clr-light-gray-violet);
+  color: var(--clr-dark-violet);
 }
 
 input[type='text'] {
@@ -285,4 +286,10 @@ input[type='text']:focus {
   padding: 5px;
   font-size: 14px;
   border-radius: 5px;
+}
+
+.continue-button:hover,
+.continue-button:focus {
+  background-color: var(--clr-light-gray-violet);
+  color: var(--clr-dark-violet);
 }
