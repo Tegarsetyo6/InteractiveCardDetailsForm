@@ -1,0 +1,35 @@
+[33mcommit 36f3c9aa86d5652685dd634e4d14c847ae955988[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: tegarsetyo6 <tegarsetyo601@gmail.com>
+Date:   Wed Aug 31 19:40:12 2022 +0700
+
+    add animation to submit button and show submit feedback
+
+[33mcommit 6120423ee24587f46a2d9b2a3e2699ef4d8f05dc[m
+Author: tegarsetyo6 <tegarsetyo601@gmail.com>
+Date:   Wed Aug 31 19:11:01 2022 +0700
+
+    Test gitbash push
+
+[33mcommit d3591b8461f68167c0734cafd3a646d58c73dddd[m
+Author: tegarsetyo6 <tegarsetyo601@gmail.com>
+Date:   Sat Aug 27 10:18:24 2022 +0700
+
+    add submit display
+
+[33mcommit b84e206323daedbbb923a8897316227941a772f2[m
+Author: tegarsetyo6 <tegarsetyo601@gmail.com>
+Date:   Fri Aug 26 21:12:22 2022 +0700
+
+    add warning for date and cvc
+
+[33mcommit bf9dab25d64d3b5d77fd9e2289ba6a0fa51ba7fd[m
+Author: tegarsetyo6 <tegarsetyo601@gmail.com>
+Date:   Fri Aug 26 16:15:33 2022 +0700
+
+    add warning to card number
+
+[33mcommit 9040c5b55b28be1b783dc13f60716c2c9a0bea18[m
+Author: tegarsetyo6 <tegarsetyo601@gmail.com>
+Date:   Fri Aug 26 16:10:11 2022 +0700
+
+    fix name input error warning
